@@ -1,20 +1,26 @@
-This is your group repo for your final project for COGS108.
+# COGS 108 - Longitudinal Mental Health Analysis
 
-This repository is private, and is only visible to the course instructors and your group mates; it is not visible to anyone else.
+This repository contains the code and materials for our final group project in COGS 108 at UC San Diego. Our final analysis is in the notebook: `FinalProject_Group055_SP25.ipynb`
 
-Template notebooks for each component are provided. Only work on the notebook prior to its due date. After each submission is due, move onto the next notebook (For example, after the proposal is due, start working in the Data Checkpoint notebook). 
+## 🧠 Project Overview
 
-This repository will be frozen on the final project due date. No further changes can be made after that time.
+In this research project, we explored whether there is a relationship between early-life emotional support and self-reported adult mental health outcomes. We were particularly interested in this idea as we were college students interested in how the brain/ mental health issues may develop.
 
-Your project proposal and final project will be graded based solely on the corresponding project notebooks in this repository.
+## 🎓 Motivation
 
-Template Jupyter notebooks have been included, with your group number replacing the XXX in the following file names. For each due date, make sure you have a notebook present in this repository by each due date with the following name (where XXX is replaced by your group number):
+We were inspired by our coursework and personal interests in psychology and neuroscience. For part of our final, we created a video summarizing our findings and formatted our work like a research paper to better communicate our ideas.
 
-- `ProjectProposal_groupXXX.ipynb`
-- `DataCheckpoint_groupXXX.ipynb`
-- `EDACheckpoint_groupXXX.ipynb`
-- `FinalProject_groupXXX.ipynb`
+## 🛠️ Tools & Techniques
 
-This is *your* repo. You are free to manage the repo as you see fit, edit this README, add data files, add scripts, etc. So long as there are the four files above on due dates with the required information, the rest is up to you all. 
+This project represents the culmination of what we learned in COGS 108. It also served as a hands-on opportunity to apply machine learning and data science principles using:
 
-Also, you are free and encouraged to share this project after the course and to add it to your portfolio. Just be sure to fork it to your GitHub at the end of the quarter!
+- **Jupyter Notebooks**
+- **Python libraries for visualization** (e.g., Matplotlib, Seaborn)
+- **Machine Learning Models:**
+  - Random Forest Regression
+  - Support Vector Machine (SVM) Classifier
+- **Evaluation Tools:**
+  - Confusion matrices
+  - Performance graphs
+
+While we had learned about more models and techniques we could have utilized, we thought that these all would help us best understand our question.
