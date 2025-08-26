@@ -2,9 +2,6 @@
 
 
 # Longitudinal Mental Health Analysis 🧠
-
-**Date:** August 26, 2025
-
 ---
 
 ## ⭐ For a detailed explanation of the project, including the methodology and results, please refer to the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb).
