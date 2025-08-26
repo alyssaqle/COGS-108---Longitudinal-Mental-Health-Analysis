@@ -1,7 +1,7 @@
 
 
 
-# Longitudinal Mental Health Analysis Dashboard 🧠📊
+# Longitudinal Mental Health Analysis 🧠
 
 **Date:** August 26, 2025
 
