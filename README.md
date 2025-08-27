@@ -3,9 +3,19 @@
 
 # Longitudinal Mental Health Analysis 🧠
 ---
+# TL;DR: This project analyzes over 4,500 records from the Add Health study to examine how childhood emotional support influences adult mental health, using exploratory data analysis, Random Forest regression, and Support Vector Machine classification to identify predictive patterns and public health implications.
 
-## ⭐ For a detailed explanation of the project, including the methodology and results, please refer to the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb).
+# ⭐ For a detailed explanation of the project, including the methodology and results, please refer to the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb).
 
+---
+
+## 👥 Authors
+
+- Alexandro Merida Silva
+- Adam Rolander
+- Alyssa Le
+- Enrique Aranda
+- Hikari Gregersen
 ---
 
 ## 📝 Summary
@@ -16,33 +26,37 @@ That’s the question we set out to answer by analyzing longitudinal survey data
 
 Using statistical analysis and machine learning, we found that higher early-life emotional support—measured by parental care, breastfeeding duration, and involvement in hobbies—was strongly associated with better adult mental health outcomes.
 
-To capture both complex relationships and the ability to flag at-risk individuals, we used two main models:
-- **Random Forest Regression** was chosen for its ability to model nonlinear relationships and rank feature importance, providing modest predictive power for adult education level (best R² = 0.13).
-- **Support Vector Machine (SVM) Classifiers** were selected for their robustness in high-dimensional, imbalanced data and their ability to prioritize recall for at-risk groups. SVMs achieved:
-	- Depression: 62% accuracy, 47% recall, 21% precision
-	- Arrest history: 62% accuracy, 53% recall, 36% precision
-	- Suicide ideation: 80% accuracy, 57% recall, 16% precision
-	- Macro F1 scores: 0.52–0.57 across tasks
-	- SVMs prioritized recall, making them useful for early flagging of at-risk individuals.
+- **Data cleaning**  
+  - Started with **4,500+ Add Health participants**, reduced to **~1,700 complete cases** to avoid bias from missing data.  
+  - Split into **childhood predictors** (parental care, grades, breastfeeding, violence, hobbies) and **adult outcomes** (depression, education, arrest, suicide ideation).  
 
-**Key findings:**
-- Parental care and early support were more predictive of adult well-being than purely clinical childhood factors.
-- Childhood adversity (e.g., being jumped, witnessing violence) increased risk for negative adult outcomes, but strong parental support mitigated these effects.
-- The models performed best at identifying rare but critical outcomes (like suicide ideation), even with some tradeoff in precision.
+- **Exploratory Data Analysis (EDA)**  
+  - **Pairplots:** chosen to spot *correlations and clusters*. Showed family warmth variables clustered; more parental care → fewer depressive feelings.  
+  - **Heatmap:** used to detect *redundancy and strong associations*. Revealed overlap (mother vs parents care) and negative links between violence and family warmth.  
+  - **PCA:** applied to *reduce complexity* and highlight main drivers. Found family support and education expectations as key dimensions.  
+  - **Bar charts:** chosen to make *group comparisons* clear. Showed higher parental care → lower depression and counseling.  
 
-**Limitations:**
-- Predicting mental health is inherently complex; survey data and two timepoints can’t capture every factor.
-- Results are most generalizable to the U.S. population.
+- **Modeling**  
+  - **Random Forest Regression:** selected for *continuous outcomes*. Handles non-linearities and redundant predictors (seen in heatmap). Modest fit (best R² = 0.13), but ranked key predictors (grades, parental support).  
+  - **Support Vector Machines (SVMs):** selected for *binary outcomes*. Works well with imbalanced data and lets us prioritize recall.  
+    - Depression → 62% accuracy, 47% recall  
+    - Arrest → 62% accuracy, 53% recall  
+    - Suicide ideation → 80% accuracy, 57% recall  
+    - Recall > precision by design → better for flagging at-risk individuals.  
 
----
+- **Insights**  
+  - Strong parental care → better adult mental health.  
+  - Violence exposure → worse outcomes, but family support buffered some effects.  
+  - Academic performance in adolescence → tied to education expectations in adulthood.  
+  - Depression and suicide hardest to predict → too complex for limited survey data.  
 
-## 🚀 Features
+- **Takeaway**  
+  - Early emotional support has a **lasting impact** on adult outcomes.  
+  - Even with modest accuracy, models gave evidence-backed insights that could guide **public health efforts** like parenting programs and violence prevention.  
 
-- **Workflow:** Reproducible research with Jupyter Notebooks
-- **Data Cleaning & Processing:** Variable selection, encoding, and preprocessing
-- **Statistical Analysis:** Correlation, regression, and hypothesis testing
-- **Machine Learning Models:** Random Forest Regression, SVM Classifier
-- **Visualizations:** Matplotlib & Seaborn for charts
+- **Limitations**  
+  - Predicting mental health is inherently complex; survey data and two timepoints can’t capture every factor.  
+  - Results are most generalizable to the U.S. population.  
 
 ---
 
@@ -83,15 +97,11 @@ COGS-108---Longitudinal-Mental-Health-Analysis/
 │   ├── ProjectProposal_Group055_SP25.ipynb   # Project proposal and planning
 │   ├── DataCheckpoint_Group055_SP25.ipynb    # Data cleaning and preparation
 │   ├── EDACheckpoint_Group055_SP25.ipynb     # Exploratory data analysis
-│   └── FinalProject_Group055_SP25.ipynb      # Main analysis notebook
+│   └── FinalProject_Group055_SP25.ipynb      # Main Final notebook
 ├── requirements.txt              # Python dependencies
 └── README.md
 ```
 
----
-
-
-## 📓 Project Workflow & Notebooks
 
 The project is organized into four main Jupyter Notebooks, each corresponding to a phase of the class project:
 
@@ -113,15 +123,6 @@ This project uses the National Longitudinal Study of Adolescent to Adult Health 
 - Adult outcomes: mental health diagnoses, depressive symptoms, counseling usage
 - Waves 1 and 4: adolescence → adulthood progression
 
----
-
-
-## 📈 Results
-
-- **Random Forest Regressor:** Used for its ability to capture complex, nonlinear relationships and rank feature importance. Provided modest predictive power, with best R² = 0.13 for expected education level (edu_exp_a).
-- **SVM Classifiers:** Chosen for their robustness in high-dimensional, imbalanced data and ability to prioritize recall for at-risk groups. Achieved 62–80% accuracy, recall up to 57% for identifying at-risk individuals (depression, arrest history, suicide ideation).
-- These models were selected to balance interpretability, predictive power, and the need to flag at-risk individuals even when positive cases are rare.
-- Findings show stronger predictive links between parental care and adult well-being than for purely clinical outcomes.
 
 ---
 
@@ -132,17 +133,6 @@ This project uses the National Longitudinal Study of Adolescent to Adult Health 
 - Jupyter Notebooks for analysis and documentation
 - Matplotlib, Seaborn for visualization
 - scikit-learn for machine learning
-
----
-
-
-## 👥 Authors
-
-- Alexandro Merida Silva
-- Adam Rolander
-- Alyssa Le
-- Enrique Aranda
-- Hikari Gregersen
 
 ---
 
