@@ -3,9 +3,9 @@
 
 # Longitudinal Mental Health Analysis 🧠
 ---
-# TL;DR: This project analyzes over 4,500 records from the Add Health study to examine how childhood emotional support influences adult mental health, using exploratory data analysis, Random Forest regression, and Support Vector Machine classification to identify predictive patterns and public health implications.
+## TL;DR: This project analyzes over 4,500 records from the Add Health study to examine how childhood emotional support influences adult mental health, using exploratory data analysis, Random Forest regression, and Support Vector Machine classification to identify predictive patterns and public health implications.
 
-# ⭐ For a detailed explanation of the project, including the methodology and results, please refer to the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb).
+## ⭐ For a detailed explanation of the project, including the methodology and results, please refer to the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb).
 
 ---
 
