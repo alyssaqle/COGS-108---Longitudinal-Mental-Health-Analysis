@@ -69,10 +69,15 @@ Using statistical analysis and machine learning, we found that higher early-life
 	git clone https://github.com/alyssaqle/COGS-108---Longitudinal-Mental-Health-Analysis.git
 	cd COGS-108---Longitudinal-Mental-Health-Analysis
 	```
-2. **Install dependencies:**
-	```bash
-	pip install -r requirements.txt
-	```
+2. (Recommended) Create and activate a Python virtual environment:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+3. **Install dependencies:**
+  ```bash
+  pip install -r requirements.txt
+  ```
 3. **Open the notebooks:**
 	- Launch Jupyter:
 	  ```bash
@@ -83,8 +88,6 @@ Using statistical analysis and machine learning, we found that higher early-life
 	- Start with the [Final Project Notebook](Notebooks/FinalProject_Group055_SP25.ipynb) for the complete workflow and results.
 
 ---
-
-
 
 
 ## 📂 Project Structure
